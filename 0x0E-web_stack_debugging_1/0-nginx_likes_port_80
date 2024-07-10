@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# making port 80 nginx
+# remove default from enabled and creating new one in avialable
+rm /etc/nginx/sites-enabled/default
+ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
+# restart
+service nginx restart
