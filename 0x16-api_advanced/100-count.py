@@ -30,14 +30,14 @@ def count_words(subreddit, word_list, after='', word_dict={}):
         return None
 
     try:
-        hot = response.json()['data']['children']
-        aft = response.json()['data']['after']
-        for post in hot:
-            title = post['data']['title']
-            lower = [word.lower() for word in title.split(' ')]
+        hposts = response.json()['data']['children']
+        aftt = response.json()['data']['after']
+        for art in hposts:
+            title = art['data']['title']
+            lower = [w.lower() for w in title.split(' ')]
 
-            for word in word_dict.keys():
-                word_dict[word] += lower.count(word)
+            for w in word_dict.keys():
+                word_dict[w] += lower.count(w)
 
     except Exception:
         return None
