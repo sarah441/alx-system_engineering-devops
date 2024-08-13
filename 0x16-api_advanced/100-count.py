@@ -15,9 +15,9 @@ def count_words(subreddit, word_list, after='', word_dict={}):
 
     if after is None:
         wordict = sorted(word_dict.items(), key=lambda x: (-x[1], x[0]))
-        for word in wordict:
-            if word[1]:
-                print('{}: {}'.format(word[0], word[1]))
+        for w in wordict:
+            if w[1]:
+                print('{}: {}'.format(w[0], w[1]))
         return None
 
     url = 'https://www.reddit.com/r/{}/hot/.json'.format(subreddit)
