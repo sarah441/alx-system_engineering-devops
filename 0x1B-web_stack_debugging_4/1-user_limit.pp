@@ -1,4 +1,4 @@
-# Solve that it can open alot of files at the same time
+# Solve that it can open a lot of files at the same time
 
 exec {'restart1':
   provider => shell,
